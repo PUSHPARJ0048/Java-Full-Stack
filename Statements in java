@@ -65,3 +65,29 @@ class Main {
         sc.close();
     }
 }
+//Calculator using switch case and while
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        String userName = "Admin@gmail.com";
+        String password = "Admin@123";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter username:");
+        String uname = sc.nextLine().trim();
+        System.out.println("Enter your password:");
+        String pass = sc.nextLine().trim();
+        if (userName.equalsIgnoreCase(uname) && password.equals(pass)) {
+            System.out.println("Welcome to homepage");
+        } 
+        else {
+            if (!userName.equalsIgnoreCase(uname)) {
+                System.out.println("Invalid Username");
+            }
+            if (!password.equals(pass)) {
+                System.out.println("Invalid Password");
+            }
+        }
+        
+        sc.close();
+    }
+}
