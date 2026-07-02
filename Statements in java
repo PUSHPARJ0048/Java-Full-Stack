@@ -112,3 +112,36 @@ public class Calculator {
         System.out.println("Calculator Closed.");
     }
 }
+// for loop
+//Printing number from 1-100 even and odd saperately using for loop
+public class EvenOdd {
+    public static void main(String[] args) {
+        System.out.println("\nEven Numbers (1-100):");
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println("\n\nOdd Numbers (1-100):");
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+//Adding data in an Array using for loop
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        String[] classNames = {"pushpa", "bal", "babblu"};
+        String newStr = "venky"; 
+        String[] newArray = Arrays.copyOf(classNames, classNames.length + 1);
+        newArray[newArray.length - 1] = newStr;
+        System.out.println(newArray[3]);
+        System.out.print("Array: ");
+        for(int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+    }
+}
