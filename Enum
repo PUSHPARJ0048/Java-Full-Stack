@@ -1,0 +1,13 @@
+public class EnumMethodsDemo {
+    enum Priority {
+        LOW, MEDIUM, HIGH
+    }
+    public static void main(String[] args) {
+        Priority taskPriority = Priority.HIGH;
+        String nameText = taskPriority.name();
+        System.out.println("Constant Name: " + nameText);
+        int indexPosition = taskPriority.ordinal();
+        System.out.println("Index Position: " + indexPosition);
+        System.out.println("String representation: " + taskPriority.toString());
+    }
+}
