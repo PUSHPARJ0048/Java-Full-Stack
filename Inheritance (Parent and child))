@@ -1,0 +1,24 @@
+class Parent {
+    String Fathername = "CH Subbarao";
+    String Mothername = "CH.N.S.Dhanalakshmi";
+    public void surname() {
+        System.out.println("Chennamsetii");
+    }
+}
+class Child extends Parent {
+    String Daughtername = "CH.Lasya";
+    String Sonname = "CH.Hima sai pushpak";
+    public void displayInfo(){
+        System.out.println(Fathername);
+        System.out.println(Mothername);
+        System.out.println(Daughtername);
+        System.out.println(Sonname);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Child myChild = new Child();
+        myChild.surname();
+        myChild.displayInfo();
+    }
+}
