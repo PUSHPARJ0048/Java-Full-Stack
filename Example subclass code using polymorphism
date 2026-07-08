@@ -8,7 +8,7 @@ class Subclass1 extends Parent{
         System.out.println("Subclass1");
     }
 }
-class Subclass2 extends Parent {A
+class Subclass2 extends Parent {
     void print() {
         System.out.println("Subclass2");
     }
