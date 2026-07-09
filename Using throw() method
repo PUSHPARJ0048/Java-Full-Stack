@@ -1,0 +1,24 @@
+public class ExceptionThrowExample {
+    public static void validateAge(int age) {
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be 18 or older to register.");
+        }
+        System.out.println("Registration successful! Age is valid.");
+    }
+    public static void main(String[] args) {
+        System.out.println("--- Test Case 1 ---");
+        try {
+            validateAge(20);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Caught an exception: " + e.getMessage());
+        }
+        System.out.println("\n--- Test Case 2 ---");
+        try {
+            validateAge(15);
+            System.out.println("This line will not execute."); 
+        } catch (IllegalArgumentException e) {
+            System.out.println("Handled Exception: " + e.getMessage());
+        }
+        System.out.println("\nProgram execution completed smoothly after handling errors.");
+    }
+}
