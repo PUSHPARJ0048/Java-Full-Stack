@@ -1,0 +1,67 @@
+class DoublyLinkedList {
+    static class Node {
+        int data;
+        Node prev;
+        Node next;
+        Node(int data) {
+            this.data = data;
+            this.prev = null;
+            this.next = null;
+        }
+    }
+    private Node head = null;
+    private Node tail = null;
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+    }
+    public void findMinMax() {
+        if (head == null) {
+            System.out.println("The list is empty.");
+            return;
+        }
+        int min = head.data;
+        int max = head.data;
+        Node current = head.next;
+        while (current != null) {
+            if (current.data < min) {
+                min = current.data;
+            }
+            if (current.data > max) {
+                max = current.data;
+            }
+            current = current.next;
+        }
+        System.out.println("Smallest Number: " + min);
+        System.out.println("Largest Number: " + max);
+    }
+    public void display() {
+        Node current = head;
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        System.out.print("Doubly Linked List: ");
+        while (current != null) {
+            System.out.print(current.data + " <-> ");
+            current = current.next;
+        }
+        System.out.println("null");
+    }
+    public static void main(String[] args) {
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insert(18);
+        list.insert(42);
+        list.insert(9);
+        list.insert(69);
+        list.insert(23);
+        list.display();
+        list.findMinMax();
+    }
+}
